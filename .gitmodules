@@ -1,0 +1,4 @@
+[submodule "ocpa"]
+	path = ocpa
+	url = git@github.com:Hannoma/ocpa.git
+	branch = main

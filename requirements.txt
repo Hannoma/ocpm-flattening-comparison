@@ -1,0 +1,24 @@
+# local package
+-e .
+
+python-dotenv>=0.5.1
+jupyter
+
+setuptools~=67.4.0
+scikit-learn~=1.2.0
+karateclub~=1.3.3
+networkx==3.0
+pandas==1.3.5
+numpy==1.22.4
+matplotlib~=3.6.3
+tensorflow==2.10.0
+tqdm~=4.64.1
+ocpa~=1.2
+dgl~=1.0.0.cu113
+keras~=2.10.0
+faker~=17.6.0
+pm4py~=2.2.32
+python-dateutil~=2.8.2
+jsonschema~=4.17.3
+lxml~=4.9.2
+seaborn~=0.12.2

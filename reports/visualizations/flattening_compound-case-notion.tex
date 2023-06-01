@@ -1,0 +1,27 @@
+\begin{table}
+\caption{Flattened the log based on a compound object type}
+\label{tab:flattening_compound-case-notion}
+
+    \centering
+    \begin{NiceTabular}{lcccc}
+    \CodeBefore
+    \rowcolor{gray!50}{1}
+    \rowcolors{2}{gray!25}{white}
+    \Body
+\textbf{event id} & \textbf{activity} & \textbf{timestamp} & \textbf{Item AND Order} & \textbf{process execution id} \\
+0 & create order & 2021-07-03 23:16:50 & i1 AND i2 AND o1 & p0 \\
+1 & approve order & 2021-07-04 04:03:12 & o1 & p0 \\
+2 & approve item & 2021-07-05 00:54:38 & i1 & p0 \\
+3 & approve item & 2021-07-06 10:00:48 & i2 & p0 \\
+4 & create invoice & 2021-07-07 08:54:58 & o1 & p0 \\
+5 & send confirmation & 2021-07-08 08:07:36 & o1 & p0 \\
+6 & create delivery & 2021-07-09 05:04:49 & i1 AND i2 AND o1 & p0 \\
+7 & create order & 2021-07-10 03:43:54 & i3 AND o2 & p1 \\
+8 & approve item & 2021-07-11 19:51:22 & i3 & p1 \\
+9 & approve order & 2021-07-12 03:09:55 & o2 & p1 \\
+10 & add item & 2021-07-13 21:29:57 & i4 AND o2 & p1 \\
+11 & send confirmation & 2021-07-14 15:21:42 & o2 & p1 \\
+12 & create invoice & 2021-07-15 01:09:25 & o2 & p1 \\
+13 & create delivery & 2021-07-16 01:05:05 & i3 AND i4 AND o2 & p1 \\
+\end{NiceTabular}
+\end{table}
