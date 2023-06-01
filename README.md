@@ -41,9 +41,7 @@ Project Organization
     │
     ├── models             <- Trained and serialized models, model predictions, or model summaries
     │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
+    ├── notebooks          <- Jupyter notebooks.
     │
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
     │   └── figures        <- Generated graphics and figures to be used in reporting
@@ -51,25 +49,33 @@ Project Organization
     ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `pip freeze > requirements.txt`
     │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
     ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
+    │   ├── data           <- Scripts to convert or flatten event logs
+    │   │   ├── clean_up.py <- Script to convert a raw dataset into an object-centric event log and preprocess it
+    │   │   ├── convert.py  <- Script to convert a pandas dataframe into an object-centric event log
+    │   │   └── flatten.py  <- Script to flatten an object-centric event log based on a compound or single object type
     │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
+    │   ├── encoding       <- Scripts to encode features
+    │   │   ├── graph.py    <- Script to encode features as feature graph prefixes
+    │   │   ├── sequential.py  <- Script to encode features as feature sequence prefixes
+    │   │   └── tabular.py   <- Script to encode features as a tabular representation
     │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
+    │   ├── features       <- Scripts to extract features from object-centric event logs
     │   │   └── build_features.py
     │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
+    │   ├── helpers        <- Utility functions used in the project
+    │   │   ├── caching.py <- Script to cache results of functions
+    │   │   ├── dataset.py  <- Script to work with defined datasets
+    │   │   └── lookup_table.py <- A hashable lookup table
+    │   │
+    │   ├── models         <- Scripts to train models and then use trained models to make predictions
+    │   │   ├── gnn.py      <- Script to train a graph neural network
+    │   │   ├── lstm.py     <- Script to train a long short-term memory network
+    │   │   └── train_model      <- Script to train simple regression models and graph embedding models, and to make predictions
     │   │
     │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+    │   │   ├── running_example.py <- Create visualizations for a running example
+    │   │   └── visualizations.py <- Create visualizations for the results of the experiments
 
 
 --------
